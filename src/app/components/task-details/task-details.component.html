@@ -1,0 +1,61 @@
+<div style="width: 400px; margin: auto;">
+  <div *ngIf="currentTask" class="edit-form">
+    <h4>Task</h4>
+    <form>
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input
+          type="text"
+          class="form-control"
+          id="title"
+          [(ngModel)]="currentTask.title"
+          name="title"
+        />
+      </div>
+      <div class="form-group">
+        <label for="description">Description</label>
+        <input
+          type="text"
+          class="form-control"
+          id="description"
+          [(ngModel)]="currentTask.description"
+          name="description"
+        />
+      </div>
+
+      <div class="form-group">
+        <label><strong>Status:</strong></label>
+        {{ currentTask.assigned ? "Assigned" : "Not assign" }}
+      </div>
+    </form>
+
+    <button
+      class="badge badge-primary mr-2"
+      *ngIf="currentTask.assigned"
+      (click)="updateAssigned(false)"
+    >
+      Unassign
+    </button>
+    <button
+      *ngIf="!currentTask.assigned"
+      class="badge badge-primary mr-2"
+      (click)="updateAssigned(true)"
+    >
+      Assign
+    </button>
+
+    <button class="badge badge-danger mr-2" (click)="deleteTask()">
+      Delete
+    </button>
+
+    <button type="submit" class="badge badge-success" (click)="updateTask()">
+      Update
+    </button>
+    <p>{{ message }}</p>
+  </div>
+
+  <div *ngIf="!currentTask">
+    <br />
+    <p>Cannot access this Task...</p>
+  </div>
+</div>

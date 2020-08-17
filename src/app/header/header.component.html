@@ -1,0 +1,27 @@
+<div *ngIf="isLoggedIn$ | async as isLoggedIn">
+<!-- <div> -->
+  <nav class="navbar navbar-expand navbar-dark bg-dark">
+    <div class="navbar-nav mr-auto row col-md-12">
+      <div class="col-md-10">
+        <li class="nav-item">
+          <a routerLink="task" class="nav-link">Home</a>
+        </li>
+      </div>
+      <div class="col-md-1 txt-rht">
+        <li class="nav-item"> 
+            <img
+            [src]="proImg"
+            width="40"
+            height="40"
+            class="rounded-circle"
+          /> 
+        </li>
+      </div>
+        <div class="col-md-1">
+            <li class="nav-item"> 
+                <a class="nav-link" (click)="onLogout()">Logout</a>
+            </li>
+        </div> 
+    </div>
+  </nav>
+</div>

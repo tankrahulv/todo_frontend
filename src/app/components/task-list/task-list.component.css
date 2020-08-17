@@ -1,0 +1,29 @@
+.mar-l-5 {
+  margin-left: 5px;
+}
+
+.flt-rgt {
+    float: right;
+}
+
+.flt-lft {
+    float: left;
+}
+
+li {
+    cursor: pointer;
+}
+
+p {
+    margin: 0px;
+}
+
+/* .search-results {
+    height: 20rem;
+    overflow: scroll;
+  } */
+
+  .list-group-item {
+    padding: 36px;
+    padding-top: 11px;
+  }

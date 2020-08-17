@@ -1,0 +1,8 @@
+.txt-rht {
+  text-align: right;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: white;
+    cursor: pointer;
+}
